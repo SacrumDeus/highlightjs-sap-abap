@@ -47,6 +47,10 @@ module.exports = function (hljs) {
         },
         contains: [
             hljs.APOS_STRING_MODE,
+            hljs.inherit(hljs.APOS_STRING_MODE, {
+                begin: '\`',
+                end: '\`'
+            }),
             hljs.NUMBER_MODE,
             {
                 className: 'comment',
